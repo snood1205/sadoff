@@ -27,10 +27,12 @@
 #
 Padrino.configure_apps do
   # enable :sessions
-  set :session_secret, 'f4ad8f96ad3d6c560c4b47338a14f5ea6a48b8e880874ded8e6ae4a30e3a7db8'
+  set :session_secret, 'cfc915be04b6c1dc6b8c05deb9597cb927d40a547931070ae94e9fd16ad10438'
   set :protection, :except => :path_traversal
   set :protect_from_csrf, true
 end
 
 # Mounts the core application for this project
+
+Padrino.mount("Sadoff::Admin", :app_file => Padrino.root('admin/app.rb')).to("/admin")
 Padrino.mount('Sadoff::App', :app_file => Padrino.root('app/app.rb')).to('/')

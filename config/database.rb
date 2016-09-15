@@ -14,20 +14,32 @@
 #   }
 #
 ActiveRecord::Base.configurations[:development] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', 'sadoff_development.db')
+  :adapter   => 'postgresql',
+  :database  => 'sadoff_development',
+  :username  => 'root',
+  :password  => '',
+  :host      => 'localhost',
+  :port      => 5432
 
 }
 
 ActiveRecord::Base.configurations[:production] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', 'sadoff_production.db')
+  :adapter   => 'postgresql',
+  :database  => 'sadoff_production',
+  :username  => 'root',
+  :password  => '',
+  :host      => 'localhost',
+  :port      => 5432
 
 }
 
 ActiveRecord::Base.configurations[:test] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', 'sadoff_test.db')
+  :adapter   => 'postgresql',
+  :database  => 'sadoff_test',
+  :username  => 'root',
+  :password  => '',
+  :host      => 'localhost',
+  :port      => 5432
 
 }
 
